@@ -16,7 +16,7 @@
 #
 
 # Device path
-DEVICE_PATH := device/samsung/m14x
+DEVICE_PATH := device/samsung/a14x
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image

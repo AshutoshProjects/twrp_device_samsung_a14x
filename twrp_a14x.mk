@@ -16,15 +16,15 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := m14x
+PRODUCT_RELEASE_NAME := a14x
 
 # Inherit device-specific configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers
-PRODUCT_NAME := twrp_m14x
-PRODUCT_DEVICE := m14x
-PRODUCT_MODEL := SM-M146B
+PRODUCT_NAME := twrp_a14x
+PRODUCT_DEVICE := a14x
+PRODUCT_MODEL := SM-A146B
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 

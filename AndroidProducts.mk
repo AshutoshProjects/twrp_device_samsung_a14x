@@ -15,9 +15,9 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 #
 
-# Product makefile for TWRP on m14x
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_m14x.mk
+# Product makefile for TWRP on a14x
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_a14x.mk
 
 # Available lunch targets for building
 COMMON_LUNCH_CHOICES := \
-    twrp_m14x-eng
+    twrp_a14x-eng
