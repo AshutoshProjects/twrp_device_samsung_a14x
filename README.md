@@ -8,6 +8,7 @@ It provides the necessary device-specific configuration to build TWRP recovery f
 | Codename | Model      | SoC          | Status       |
 |----------|-----------|-------------|-------------|
 | a14x     | SM-A146B  | Exynos 1330 | ✅ Maintained |
+| a14x     | SM-A146M  | Exynos 1330 | ✅ Maintained |
 
 > This tree depends on the [`s5e8535-common`](https://github.com/AshutoshProjects/twrp_device_samsung_s5e8535-common) tree for shared components.
 
