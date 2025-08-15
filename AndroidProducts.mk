@@ -16,7 +16,8 @@
 #
 
 # Product makefile for TWRP on a14x
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_a14x.mk
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/twrp_a14x.mk
 
 # Available lunch targets for building
 COMMON_LUNCH_CHOICES := \

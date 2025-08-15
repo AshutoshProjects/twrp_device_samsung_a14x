@@ -16,4 +16,4 @@
 #
 
 # Inherit common TWRP configuration
-$(call inherit-product, $(COMMON_PATH)/twrp_s5e8535.mk)
+$(call inherit-product, device/samsung/s5e8535-common/twrp_s5e8535.mk)

@@ -19,7 +19,7 @@
 PRODUCT_RELEASE_NAME := a14x
 
 # Inherit device-specific configuration
-$(call inherit-product, $(DEVICE_PATH)/device.mk)
+$(call inherit-product, device/samsung/a14x/device.mk)
 
 # Device identifiers
 PRODUCT_NAME := twrp_a14x
@@ -30,4 +30,4 @@ PRODUCT_MANUFACTURER := samsung
 
 # Include recovery root files
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*, $(DEVICE_PATH)/recovery/root, recovery/root)
+    $(call find-copy-subdir-files,*,device/samsung/a14x/recovery/root,$(TARGET_COPY_OUT_RECOVERY)/root)
