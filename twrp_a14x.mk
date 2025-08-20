@@ -15,11 +15,21 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 #
 
+# Auto-path snippet
+TREE_NAME := $(lastword $(subst /, ,$(firstword $(MAKEFILE_LIST))))
+TREE_NAME_NO_PREFIX := $(patsubst twrp_%,%,$(basename $(TREE_NAME)))
+TREE_PATH := $(subst _,/,$(TREE_NAME_NO_PREFIX))
+ifeq ($(findstring common,$(TREE_PATH)),)
+    DEVICE_PATH := $(TREE_PATH)
+else
+    COMMON_PATH := $(TREE_PATH)
+endif
+
 # Release name
 PRODUCT_RELEASE_NAME := a14x
 
 # Inherit device-specific configuration
-$(call inherit-product, device/samsung/a14x/device.mk)
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers
 PRODUCT_NAME := twrp_a14x
@@ -30,4 +40,4 @@ PRODUCT_MANUFACTURER := samsung
 
 # Include recovery root files
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/samsung/a14x/recovery/root,$(TARGET_COPY_OUT_RECOVERY)/root)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,$(TARGET_COPY_OUT_RECOVERY)/root)
